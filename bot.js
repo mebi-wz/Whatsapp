@@ -183,7 +183,13 @@ bot.on('callback_query', async (query) => {
     bot.sendMessage(chatId, '🤖 This bot helps you register your phone number and provides other features. Explore more by interacting with the options!')
       .then(() => showMainMenu(chatId));
   } else if (action === 'chat') {
-    bot.sendMessage(chatId, '💬 Let\'s start chatting! Please type your message.');
+    userState[chatId] = { step: 'in_chat' };
+    bot.sendMessage(chatId, '💬 Let\'s start chatting! Please type your message.', {
+       reply_markup: {
+         keyboard: [[{ text: '🚪 Exit Chat' }]],
+         resize_keyboard: true
+       }
+    });
   } else if (action === 'leave_balance') {
     // Fetch leave balance from the server
     try {
@@ -298,7 +304,19 @@ bot.on('message', async (msg) => {
   if (!userMessage) return;
 
   if (userMessage === '📋 show menu' || userMessage === 'main menu' || userMessage === 'menu') {
+    delete userState[chatId];
     return showMainMenu(chatId);
+  }
+
+  if (userMessage === '🚪 exit chat' || userMessage === 'exit chat' || userMessage === 'exit') {
+    delete userState[chatId];
+    bot.sendMessage(chatId, '👋 You have exited the chat.', {
+        reply_markup: {
+          keyboard: [[{ text: '📋 Show Menu' }]],
+            resize_keyboard: true,
+        }
+    }).then(() => showMainMenu(chatId));
+    return;
   }
 
   // Handle multi-step states

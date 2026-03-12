@@ -88,10 +88,18 @@ module.exports = {
     ],
     services_info: [
       {
-        trigger: ['plumber', 'electrician', 'cleaning', 'carpentry', 'repair', 'fix', 'service'],
+        trigger: [
+          'plumber', 'electrician', 'cleaning', 'carpentry', 'repair', 'fix', 'service',
+          'i want a service', 'i need a service', 'looking for a service', 'find a service',
+          'i need plumbing', 'i need an electrician', 'i need a cleaner', 'i need a carpenter',
+          'my pipe is leaking', 'broken pipe', 'clogged drain', 'blocked sink',
+          'light is broken', 'no power', 'wiring issue', 'electrical problem',
+          'house is dirty', 'need someone to clean', 'office cleaning',
+          'need furniture fixed', 'broken chair', 'custom wood', 'wood repair'
+        ],
         response: [
-          '🛠️ It looks like you need a service! If you haven\'t already, register as a Client and use the "Find a Service" option in the Main Menu to find providers in your area.',
-          '🔍 Looking for a professional? We can connect you with plumbers, electricians, and more across Addis Ababa. Register and select "Find a Service" to start!'
+          '🛠️ It looks like you need a service! If you haven\'t already, register as a Client and click the "📋 Show Menu" button, then use the "Find a Service" option to find providers in your area.',
+          '🔍 Looking for a professional? We can connect you with plumbers, electricians, cleaners, and carpenters across Addis Ababa.\n\nType "menu" or click "📋 Show Menu" and select "Find a Service" to start your search!'
         ]
       }
     ],
