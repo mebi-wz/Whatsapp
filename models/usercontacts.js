@@ -15,6 +15,23 @@ module.exports = function(sequelize, DataTypes) {
     chat_id: {
       type: DataTypes.STRING(20),
       allowNull: false
+    },
+    role: {
+      type: DataTypes.ENUM('client', 'provider', 'unknown'),
+      allowNull: false,
+      defaultValue: 'unknown'
+    },
+    category: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    location: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    service_details: {
+      type: DataTypes.TEXT,
+      allowNull: true
     }
   }, {
     sequelize,

@@ -1,31 +1,31 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "123",
+    "username": "odoo19",
+    "password": "odoo19",
     "database": "BOT",
     "host": "localhost",
     "dialect": "postgres",
     "pool": {
-        "max": 20,
-        "min": 0,
-        "acquire": 30000,
-        "idle": 10000
+      "max": 20,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
     },
-    "port": 5000,
+    "port": 5432,
     "logging": false
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
+    "username": "odoo19",
+    "password": "odoo19",
+    "database": "BOT",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
+    "username": "odoo19",
+    "password": "odoo19",
+    "database": "BOT",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   }
 }

@@ -81,8 +81,25 @@ module.exports = {
       {
         trigger: ['what can you do', 'what is your purpose', 'what is this bot for'],
         response: [
-          '🤖 I can help you register your phone number and assist with various services.',
-          '✨ This bot allows you to register and interact with our system. How can I help you today?'
+          '🤖 I can help you find service providers in Addis Ababa, register your own services, or assist Hagbes employees with HR tasks like leave balances.',
+          '✨ This bot connects Clients with Service Providers (like plumbers or electricians) across Addis Ababa, and handles Hagbes employee services. How can I help you today?'
+        ]
+      }
+    ],
+    services_info: [
+      {
+        trigger: ['plumber', 'electrician', 'cleaning', 'carpentry', 'repair', 'fix', 'service'],
+        response: [
+          '🛠️ It looks like you need a service! If you haven\'t already, register as a Client and use the "Find a Service" option in the Main Menu to find providers in your area.',
+          '🔍 Looking for a professional? We can connect you with plumbers, electricians, and more across Addis Ababa. Register and select "Find a Service" to start!'
+        ]
+      }
+    ],
+    locations_info: [
+      {
+        trigger: ['addis ababa', 'bole', 'arada', 'kazanchis', 'old airport', 'kirkos', 'lideta', 'yeka'],
+        response: [
+          '📍 We currently match clients with service providers across major districts in Addis Ababa, including Bole, Arada, Kazanchis, and more. Use the "Find a Service" menu to search by location!'
         ]
       }
     ],

@@ -25,7 +25,15 @@ const helpDataset = {
     },
     "default_help": {
       question: "I don't understand, can you help?",
-      answer: "Sure! You can ask me about your leave balance, assets, or how to register your phone number. Just type 'Help' anytime you get lost, and I'll guide you through."
+      answer: "Sure! You can ask me about finding a service, registering as a provider, checking your leave balance, or viewing assets. Just type 'Help' anytime you get lost, and I'll guide you through."
+    },
+    "find_service_help": {
+      question: "How do I find a service provider?",
+      answer: "As a registered Client, you can click 'Find a Service' from the main menu. You'll be asked to choose a service category (like Plumbing or Cleaning) and a specific location in Addis Ababa (like Bole or Arada). The bot will then provide you with contact details for matched providers."
+    },
+    "provider_registration_help": {
+      question: "How do I register to offer my services?",
+      answer: "When you share your phone number to register, select 'I am a Service Provider'. You can then choose your service category (e.g., Electrician), select your location in Addis Ababa, and add a short description of what you do!"
     }
   };
   
